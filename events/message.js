@@ -1,4 +1,8 @@
-const db = require("quick.db")
+const db = require("quick.db");
+const { Client } = require('discord.js');
+const bot = new Client({ disableMentions: 'everyone',
+  partials: ["MESSAGE", "CHANNEL", "REACTION"]
+});
 const { addexp } = require("../handlers/xp.js");
 const { ownerID, default_prefix } = require("../config.json");
 const { badwords } = require("../data.json") 
@@ -65,7 +69,6 @@ if(!message.member.hasPermission("ADMINISTRATOR")) {
 
   if (command) command.run(client, message, args);
 }
-
 
 //-------------------------------------------- F U N C T I O N ------------------------------------------
 function is_url(str) {

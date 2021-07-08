@@ -1,5 +1,9 @@
 const { token } = require("./config.json");
-const discord = require("discord.js"); 
+const { Client, Collection } = require('discord.js');
+const discord = require("discord.js");
+const bot = new Client({ disableMentions: 'everyone',
+  partials: ["MESSAGE", "CHANNEL", "REACTION"]
+});
 const client = new discord.Client({
   disableEveryone: true 
 });

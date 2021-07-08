@@ -1,5 +1,8 @@
 const { readdirSync } = require("fs");
-const ascii = require("ascii-table");
+const ascii = require("ascii-table");const { Client } = require('discord.js');
+const bot = new Client({ disableMentions: 'everyone',
+  partials: ["MESSAGE", "CHANNEL", "REACTION"]
+});
 
 
 // Create a new Ascii table

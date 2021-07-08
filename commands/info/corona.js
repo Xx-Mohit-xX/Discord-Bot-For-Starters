@@ -2,11 +2,11 @@ const { MessageEmbed } = require("discord.js")
 const fetch = require("node-fetch")
 
 module.exports = {
-  name: "corona",
+  name: "covid",
   category: "info",
-  description: "Get the stats of corona",
-  usage: "corona all or jsonData <country>",
-  aliases: ["covid", "covid19"],
+  description: "Get the stats of covid",
+  usage: "corona all or corona <country>",
+  aliases: ["corona", "covid19"],
   run: async (client, message, args) => {
 
     let link;
